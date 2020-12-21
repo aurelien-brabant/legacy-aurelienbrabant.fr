@@ -1,0 +1,32 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.postHeader {
+	margin-top: 1em;
+	text-align: center;
+}
+
+.postHeader h2 {
+	margin: 5px 0;
+	font-size: 1.7em;
+}
+
+.postHeader h4 {
+	margin: 7px 0;
+	font-weight: 400;
+}
+
+.postHeader a {
+	text-transform: uppercase;
+	opacity: 0.7;
+}
+
+.postHeader a:hover {
+	opacity: 1;
+}
+
+.postBody {
+	margin-top: 1.5em;
+}

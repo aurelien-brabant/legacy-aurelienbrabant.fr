@@ -1,0 +1,81 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.barWrapper {
+	display: flex;
+	align-items: center;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.barWrapper input {
+	width: 100%;
+	font-family: inherit;
+	font-size: 1.5em;
+	outline: none;
+	padding: 5px 10px;
+	padding-right: 1.8em;
+	border: 1px #c0c0c0 solid;
+	border-radius: 3px;
+}
+
+.barWrapper i {
+	transform: translateX(-2em);
+	opacity: 0.5;
+	font-size: 1.2em;
+	transition: opacity .2s;
+}
+
+.barWrapper input:focus + i {
+	opacity: 1;
+}
+
+.postList {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2.6em;
+}
+
+.post h3 {
+	font-size: 1.7em;
+	padding: 0 0 5px 0;
+	margin: 0;
+}
+
+.post {
+	margin: 1em 0;
+}
+
+.post .date {
+	color: #000;
+}
+
+.readBtn {
+	padding: 5px 10px;
+	text-transform: uppercase;
+	background-color: transparent;
+	outline: none;
+	border: 2px black solid;
+	border-radius: 3px;
+	transition: all .2s;
+}
+
+.readBtn i {
+	font-size: 1em;
+	margin-left: 4px;
+	opacity: 0.7;
+}
+
+.readBtn:hover {
+	opacity: 1;
+}
+
+@media screen and (min-width: 600px) {
+	.barWrapper {
+		width: 75%;
+	}
+}

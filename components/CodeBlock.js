@@ -8,6 +8,11 @@ export default function CodeBlock({ language, value }) {
 			showLineNumbers
 			showInlineLineNumbers
 			style={atomDark}
+			codeTagProps={{
+				style: {
+					fontFamily: "JetBrains Mono"
+				}
+			}}
 		>
 			{value}
 		</SyntaxHighlighter>

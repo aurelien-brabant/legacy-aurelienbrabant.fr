@@ -1,4 +1,7 @@
-import Link from "next/link"
+import { Fragment } from "react"; 
+
+import Link from "next/link";
+import Head from "next/head";
 
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "../../components/CodeBlock";
@@ -12,31 +15,36 @@ import Container from "../../components/Container";
 
 export default function Post({ postData }) {
     return (
-        <Layout>
-            <div className={styles.wrapper}>
-                <div
-                    className={styles.postHeader}
-                >
-                    <h2>{postData.title}</h2>
-                    <h4>
-                        Le {" "} 
-                        {new Date(postData.date).toLocaleDateString("fr-Fr")} { " "}
-                        - Par {postData.author} 
-                    </h4>
-                    <Link href="/">
-                        <a>Retour a la liste</a>
-                    </Link>
+        <Fragment>
+            <Head>
+                <title>{postData.title}</title>
+            </Head>
+            <Layout>
+                <div className={styles.wrapper}>
+                    <div
+                        className={styles.postHeader}
+                    >
+                        <h2>{postData.title}</h2>
+                        <h4>
+                            Le {" "} 
+                            {new Date(postData.date).toLocaleDateString("fr-Fr")} { " "}
+                            - Par {postData.author} 
+                        </h4>
+                        <Link href="/">
+                            <a>Retour a la liste</a>
+                        </Link>
+                    </div>
+                    <div className={styles.postBody}>
+                        <ReactMarkdown
+                            source={postData.content}
+                            renderers={{
+                                code: CodeBlock,
+                            }}
+                        />
+                    </div>
                 </div>
-                <div className={styles.postBody}>
-                    <ReactMarkdown
-                        source={postData.content}
-                        renderers={{
-                            code: CodeBlock,
-                        }}
-                    />
-                </div>
-            </div>
-        </Layout>
+            </Layout>
+        </Fragment>
     );
 }
 

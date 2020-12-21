@@ -70,18 +70,21 @@ function Home(props) {
 								<p>
 									{post.preview}
 								</p>
-								<a
-									className={styles.readBtn}
+								<Link
 									href={`/posts/${post.id}`}
 								>
-									Lire <i className="fa fa-arrow-right" />
-								</a>
+									<a
+										className={styles.readBtn}
+									>
+										Lire <i className="fa fa-arrow-right" />
+									</a>
+								</Link>
 							</div>
 						))}
 					</div>
 				</div>
 			</Layout>
-		</ Fragment>
+		</Fragment>
     );
 }
 

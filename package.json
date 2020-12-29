@@ -10,7 +10,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@material-ui/icons": "^4.11.2",
     "gray-matter": "^4.0.2",
     "next": "^10.0.3",
     "react": "^17.0.1",

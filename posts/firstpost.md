@@ -14,6 +14,10 @@ Amazing **bold**, *italic* all of that.
 
 Some C code because you deserve it <3
 
+`small` [some link](https://google.com)
+
+![](https://www.w3schools.com/colors/img_colormap.gif)
+
 ```c
 #include <stdio..h>
 

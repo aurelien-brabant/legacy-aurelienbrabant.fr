@@ -1,0 +1,10 @@
+.inlineCode {
+	color: #F10C1A;
+	font-size: 0.95em;
+	padding: 2px 5px;
+	margin: 0 2px;
+	font-family: JetBrains Mono;
+	background-color: rgba(255, 255, 255, 0.5);
+	border: 1px rgba(241, 12, 26, 0.3) solid;
+	border-radius: 5px;
+}

@@ -6,12 +6,14 @@ const socialMedias = [
 	{
 		href: "https://github.com/abrabant-42",
 		ficon: "fa fa-github-alt",
-		color: "#000000"
+		color: "#000000",
+		id: 0,
 	},
 	{
 		href: "https://www.linkedin.com/in/aurelien-brabant",
 		ficon: "fa fa-linkedin",
-		color: "#0a66C2"
+		color: "#0a66C2",
+		id: 1,
 	}
 ]
 
@@ -22,6 +24,7 @@ export default function Socials() {
 		>
 			{socialMedias.map((item) => (
 				<a 
+					key={item.id}
 					href={item.href}>
 					<i 
 						className={`${item.ficon}`}

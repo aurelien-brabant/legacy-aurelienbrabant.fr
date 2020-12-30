@@ -52,7 +52,10 @@ function Home(props) {
 					</div>
 					<div className={styles.postList}>
 						{filteredPosts.map(post => (
-							<div className={styles.post}>
+							<div 
+								className={styles.post}
+								key={post.id}
+							>
 								<h3>
 									<Link 
 										href={`/posts/${post.id}`}

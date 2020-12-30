@@ -3,15 +3,13 @@ import { Fragment } from "react";
 import Link from "next/link";
 import Head from "next/head";
 
-import ReactMarkdown from "react-markdown";
-import CodeBlock from "../../components/CodeBlock";
+import Markdown from "../../components/markdown/Markdown.js"
 
 import { getPostsId, getPostData } from "../../lib/posts";
 
 import styles from "../../styles/id.module.css";
 
 import Layout from "../../components/Layout";
-import Container from "../../components/Container";
 
 export default function Post({ postData }) {
     return (
@@ -35,11 +33,8 @@ export default function Post({ postData }) {
                         </Link>
                     </div>
                     <div className={styles.postBody}>
-                        <ReactMarkdown
-                            source={postData.content}
-                            renderers={{
-                                code: CodeBlock,
-                            }}
+                        <Markdown
+                            markdownData={postData.content}
                         />
                     </div>
                 </div>

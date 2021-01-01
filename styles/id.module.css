@@ -1,6 +1,8 @@
 .wrapper {
+	font-size: 1.2em;
 	display: flex;
 	flex-direction: column;
+	line-height: 1.5em;
 }
 
 .postHeader {
@@ -29,4 +31,8 @@
 
 .postBody {
 	margin-top: 1.5em;
+}
+
+.postBody h1 {
+	line-height: 1.2em;
 }

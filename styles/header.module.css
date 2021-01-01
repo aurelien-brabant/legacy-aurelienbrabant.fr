@@ -9,7 +9,7 @@
 	background-color: #fff;
 	font-size: 0.8em;
 	z-index: 999;
-	transition: top .4s;
+	transition: top .2s;
 }
 
 .header.headerHidden {

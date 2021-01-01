@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Header from "./Header";
+import Footer from "./Footer";
 import Container from "./Container";
 
 export default function Layout(props) {
@@ -36,6 +37,7 @@ export default function Layout(props) {
 			</Head>
 			<Header />
 			{props.children}
+			<Footer />
 		</>	
 	)
 }

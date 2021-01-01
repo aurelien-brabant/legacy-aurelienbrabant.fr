@@ -35,9 +35,7 @@ export default function Layout(props) {
 				/>
 			</Head>
 			<Header />
-			<Container>
-				{props.children}
-			</Container>
+			{props.children}
 		</>	
 	)
 }

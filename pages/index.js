@@ -6,7 +6,8 @@ import { getPostsMeta } from "../lib/posts.js";
 
 import styles from "../styles/index.module.css";
 
-import Layout from "../components/Layout"
+import Layout from "../components/Layout";
+import Container from "../components/Container";
 
 export async function getStaticProps() {
 	const posts = getPostsMeta();
@@ -41,51 +42,59 @@ function Home(props) {
 				<title>Aurelien Brabant</title>
 			</Head>
 			<Layout>
-				<div className={styles.wrapper}>
-					<div className={styles.barWrapper}>
-						<input 
-							type="text"
-							placeholder="Rechercher" 
-							onChange={handleChange}
-							value={searchVal}
-						/>
-					</div>
-					<div className={styles.postList}>
-						{filteredPosts.map(post => (
-							<div 
-								className={styles.post}
-								key={post.id}
-							>
-								<h3>
-									<Link 
-										href={`/posts/${post.id}`}
-									>
-										<a>
-											{post.title}
-										</a>
-									</Link>
-								</h3>
-								<span 
-									className={styles.date}
-								>
-									{new Date(post.date).toLocaleDateString("fr-FR")}
-								</span>
-								<p>
-									{post.preview}
-								</p>
+				<Container
+					pageHeight
+					size="md"
+				>
+					<div className={styles.wrapper}>
+						<div className={styles.barWrapper}>
+							<input 
+								type="text"
+								placeholder="Rechercher" 
+								onChange={handleChange}
+								value={searchVal}
+							/>
+						</div>
+						<div className={styles.postList}>
+							{filteredPosts.map(post => (
 								<Link
 									href={`/posts/${post.id}`}
 								>
-									<a
-										className={styles.readBtn}
+									<div 
+										className={styles.post}
+										key={post.id}
 									>
-										Lire <i className="fa fa-arrow-right" />
-									</a>
+										<div
+											className={styles.metaInf}
+										>
+											<h3> {post.title} </h3>
+											<span 
+												className={styles.date}
+											>
+												Le {new Date(post.date).toLocaleDateString("fr-FR")}
+											</span>
+											<span
+												className={styles.author}
+											>
+												Par {post.author}
+											</span>
+											<p>
+												{post.preview}
+											</p>
+										</div>
+										<div
+											className={styles.postCover}
+											style={{
+												backgroundImage: `url(${post.coverUrl})`
+											}}
+										>
+										</div>
+									</div>
 								</Link>
-							</div>
-						))}
+							))}
+						</div>
 					</div>
-				</div>
+				</Container>
 			</Layout>
 		</Fragment>
     );

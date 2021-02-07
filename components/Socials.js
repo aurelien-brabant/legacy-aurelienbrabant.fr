@@ -4,7 +4,7 @@ import styles from "../styles/socials.module.css";
 
 const socialMedias = [
 	{
-		href: "https://github.com/abrabant-42",
+		href: "https://github.com/aurelien-brabant",
 		ficon: "fa fa-github-alt",
 		color: "#000000",
 		id: 0,

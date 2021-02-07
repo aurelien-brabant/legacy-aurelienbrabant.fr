@@ -60,7 +60,7 @@ export default function Header() {
 					{/* naviguation bar */}
 					<nav className={styles.navbar}>
 						<ul>
-							<li><Link href="/about"><a>A propos</a></Link></li>
+							<li><Link href="/about"><a>About</a></Link></li>
 						</ul>
 					</nav>
 					<Socials />

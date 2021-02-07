@@ -27,8 +27,12 @@ html, body {
 }
 
 a {
-	color: inherit;
+	color: #C500ED;
 	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 /*

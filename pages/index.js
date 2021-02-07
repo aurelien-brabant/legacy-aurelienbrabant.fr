@@ -50,7 +50,7 @@ function Home(props) {
 						<div className={styles.barWrapper}>
 							<input 
 								type="text"
-								placeholder="Rechercher" 
+								placeholder="Search post" 
 								onChange={handleChange}
 								value={searchVal}
 							/>

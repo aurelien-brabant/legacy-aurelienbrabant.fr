@@ -1,3 +1,13 @@
+/* disable traditional link style */
+
+.header a {
+	color: inherit;
+}
+
+.header a:hover {
+	text-decoration: none;
+}
+
 .header {
 	top: 0;
 	left: 0;

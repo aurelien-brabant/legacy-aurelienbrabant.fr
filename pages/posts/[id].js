@@ -28,12 +28,12 @@ export default function Post({ postData }) {
                         >
                             <h2>{postData.title}</h2>
                             <h4>
-                                Le {" "} 
+                                The {" "} 
                                 {new Date(postData.date).toLocaleDateString("fr-Fr")} { " "}
-                                - Par {postData.author} 
+                                - By {postData.author} 
                             </h4>
                             <Link href="/">
-                                <a>Retour a la liste</a>
+                                <a>Go back to menu</a>
                             </Link>
                         </div>
                         <div className={styles.postBody}>

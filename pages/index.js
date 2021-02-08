@@ -71,12 +71,12 @@ function Home(props) {
 											<span 
 												className={styles.date}
 											>
-												Le {new Date(post.date).toLocaleDateString("fr-FR")}
+												{new Date(post.date).toLocaleDateString("en-US")}
 											</span>
 											<span
 												className={styles.author}
 											>
-												Par {post.author}
+												By {post.author}
 											</span>
 											<p>
 												{post.preview}

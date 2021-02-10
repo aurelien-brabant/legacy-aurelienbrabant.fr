@@ -36,3 +36,19 @@
 .postBody h1 {
 	line-height: 1.2em;
 }
+
+.endLinks {
+	display: flex;
+	border-top: 2px rgba(0, 0, 0, .1) solid;
+	padding: 20px 0;
+}
+
+.endLinks div {
+	width: 50%;
+}
+
+.endLinks div .arrows {
+	font-size: 1.2em;
+	font-family: Terminus;
+	margin: 0 0.3em;
+}

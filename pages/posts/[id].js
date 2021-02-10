@@ -41,6 +41,43 @@ export default function Post({ postData }) {
                                 markdownData={postData.content}
                             />
                         </div>
+                        <div className={styles.endLinks}>
+                            <div>
+                                {postData.previous && (
+                                    <Fragment>
+                                        <span
+                                            className={styles.arrows}
+                                        >
+                                            {"<<"}
+                                        </span>
+                                        <Link 
+                                            href={`/posts/${postData.previous}`}
+                                        >
+                                            {postData.previous}
+                                        </Link>
+
+                                    </Fragment>
+                                )
+                                }
+                            </div>
+                            <div style={{textAlign: "right"}}>
+                                {postData.next && (
+                                    <Fragment>
+                                        <Link 
+                                            href={`/posts/${postData.next}`}
+                                        >
+                                            {postData.next}
+                                        </Link>
+                                        <span
+                                            className={styles.arrows}
+                                        >
+                                            {">>"}
+                                        </span>
+                                    </Fragment>
+                                )
+                                }
+                            </div>
+                        </div>
                     </div>
                 </Container>
             </Layout>

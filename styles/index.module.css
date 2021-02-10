@@ -77,6 +77,8 @@
 		display: block;
 		width: 40%;
 		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 	.post .metaInf {

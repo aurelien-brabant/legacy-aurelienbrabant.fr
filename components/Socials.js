@@ -14,6 +14,11 @@ const socialMedias = [
 		ficon: "fa fa-linkedin",
 		color: "#0a66C2",
 		id: 1,
+	},
+	{
+		href: "https://twitter.com/aurelienb42",
+		ficon: "fa fa-twitter",
+		color: "#00A2F5"
 	}
 ]
 

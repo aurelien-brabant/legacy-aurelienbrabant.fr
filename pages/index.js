@@ -19,7 +19,7 @@ export async function getStaticProps() {
 }
 
 function Home(props) {
-    const [ searchVal, setSearchVal ] = useState("");
+	const [ searchVal, setSearchVal ] = useState("");
 	const [ filteredPosts, setFilteredPosts ] = useState([]);
 
 	useEffect(() => {
@@ -39,7 +39,61 @@ function Home(props) {
 		applyFilter(event.target.value);
 	}
 
-    return (
+	/* This helper function renders the post card and can place the image
+	at the left or the right of the card depending on the needs. This feature
+	is not used at the moment though, as I don't find alternating really
+	beautiful in this case */
+
+	const renderPostCard = (post, imageLocation) => (
+		<Link
+			href={`/posts/${post.id}`}
+		>
+			<div 
+				className={styles.post}
+				key={post.id}
+			>
+				{imageLocation == -1 && (
+					<div
+						className={styles.postCover}
+						style={{
+							backgroundImage: `url("/covers/${post.id}.png")`
+						}}
+					>
+					</div>
+				)}
+				<div
+					className={styles.metaInf}
+				>
+					<h3> {post.title} </h3>
+					<span 
+						className={styles.date}
+					>
+						{new Date(post.date).toLocaleDateString("en-US")}
+					</span>
+					<span
+						className={styles.author}
+					>
+						By {post.author}
+					</span>
+					<p>
+						{post.preview}
+					</p>
+				</div>
+				{imageLocation == 1 && (
+					<div
+						className={styles.postCover}
+						style={{
+							backgroundImage: `url("/covers/${post.id}.png")`
+						}}
+					>
+					</div>
+				)}
+
+			</div>
+		</Link>
+	)
+
+	return (
 		<Fragment>
 			<Head>
 				<title>Aurelien Brabant</title>
@@ -59,48 +113,13 @@ function Home(props) {
 							/>
 						</div>
 						<div className={styles.postList}>
-							{filteredPosts.map(post => (
-								<Link
-									href={`/posts/${post.id}`}
-								>
-									<div 
-										className={styles.post}
-										key={post.id}
-									>
-										<div
-											className={styles.metaInf}
-										>
-											<h3> {post.title} </h3>
-											<span 
-												className={styles.date}
-											>
-												{new Date(post.date).toLocaleDateString("en-US")}
-											</span>
-											<span
-												className={styles.author}
-											>
-												By {post.author}
-											</span>
-											<p>
-												{post.preview}
-											</p>
-										</div>
-										<div
-											className={styles.postCover}
-											style={{
-												backgroundImage: `url("/covers/${post.id}.png")`
-											}}
-										>
-										</div>
-									</div>
-								</Link>
-							))}
+							{filteredPosts.map(post => renderPostCard(post, 1))} 
 						</div>
 					</div>
 				</Container>
 			</Layout>
 		</Fragment>
-    );
+	);
 }
 
 export default Home

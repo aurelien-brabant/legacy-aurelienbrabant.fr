@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 import styles from "../../styles/markdown/codeblock.module.css";
 
@@ -9,7 +9,7 @@ export default function CodeBlock({ language, value }) {
 			language={language} 
 			showLineNumbers
 			showInlineLineNumbers
-			style={dracula}
+			style={atomDark}
 			codeTagProps={{
 				className: styles.codeblock
 			}}

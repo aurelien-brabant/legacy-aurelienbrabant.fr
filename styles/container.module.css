@@ -19,5 +19,17 @@
 }
 
 .lg {
-	max-width: 1200px;
+	max-width: 1250px;
+}
+
+/*
+** This rule will only be applied on extra large screens.
+** The idea of implementing such a class came from some testing on a 4k
+** iMac screen.
+*/
+
+@media screen and (min-width: 1920px) {
+	.enableXXL {
+		max-width: 1500px;
+	}
 }

@@ -88,7 +88,7 @@ function Home(props) {
 										<div
 											className={styles.postCover}
 											style={{
-												backgroundImage: `url(${post.coverUrl})`
+												backgroundImage: `url("/covers/${post.id}.png")`
 											}}
 										>
 										</div>

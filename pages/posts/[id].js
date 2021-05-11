@@ -21,6 +21,7 @@ export default function Post({ postData }) {
             <Layout>
                 <Container
                     pageHeight
+					size="lg"
                 >
                     <div className={styles.wrapper}>
                         <div

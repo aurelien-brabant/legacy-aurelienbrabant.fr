@@ -27,7 +27,10 @@ function Home(props) {
 	}, [])
 
 	const applyFilter = (s) => {
-		setFilteredPosts(props.posts.filter(post => post.title.trim().includes(s.trim())));	
+		/* The case does not matter */
+		const normalizedSearchTerm = s.trim().toLowerCase();
+
+		setFilteredPosts(props.posts.filter(post => post.title.trim().toLowerCase().includes(normalizedSearchTerm)));	
 	}
 
 	/* form handlers */

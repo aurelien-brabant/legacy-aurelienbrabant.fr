@@ -3,6 +3,13 @@
 	left: 0;
 	right: 0;
 	padding: 10px 20px;
-	background-color: #ffffff;
 	text-align: center;
+}
+
+.divider {
+	height: 2px;
+	background-color: rgba(10, 10, 10, .2);
+	display: block;
+	margin: 1rem 0;
+	margin: 0.6rem 0;
 }

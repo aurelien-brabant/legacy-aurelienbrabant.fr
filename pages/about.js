@@ -17,7 +17,7 @@ export default function About() {
 						<div>
 							<h3>Hi there!</h3>
 							<p>
-								I'm Aurelien, a french programmer and student at <a href="https://42.fr/">school 42</a>.
+								I'm Aurélien, a french programmer and student at <a href="https://42.fr/">school 42</a>.
 							</p>
 							<p>
 								I occasionally share useful content and personal thoughts on

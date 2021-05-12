@@ -13,7 +13,6 @@ Hey! If this post is the first you're reading from me about the minilibx, [you'd
 post](https://aurelienbrabant.fr/posts/getting-started-with-the-minilibx), which explains all the basics you need to know.
 That said, let's discuss how we are going to handle events using the minilibx!
 
-
 # Screen metrics
 
 Before we actually start, I'd want to make sure we are all on the same page.
@@ -30,7 +29,7 @@ As an exemple, let's say we want to draw a line that has the following endpoints
 
 The following is what is going to be rendered on the window:
 
-![](https://i.imgur.com/Gbh6cxL.png)
+![](line-drawing.png)
 
 What we get is an horizontal line taking all the width of the screen (we went from x=0 to x=1920), with a top margin of 100 pixels (the two points have
 the same y coordinate, 100, therefore the line is drawn on the 100th row).
@@ -55,7 +54,7 @@ Finally, we need to tell the minilibx what is going to be the color of the pixel
 
 ## Encoding a color, according to the True Color standard
 
-![](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F--Zib9xcx0vM%2FUlmM1mML7iI%2FAAAAAAAAZHA%2Fu8-4lLn7p84%2Fs1600%2FColor%2BSplash%2BWallpapers%2B%2525286%252529.jpg&f=1&nofb=1)
+![](colors.png)
 
 Several ways of representing colors for computer graphics exist. The minilibx is complying to the **true color** standard.
 Here's the definition of what the true color standard is, according to [techopedia](https://www.techopedia.com/definition/496/true-color):
@@ -176,7 +175,7 @@ respectively, which gives us the center of the window. The color is specified in
 
 Try to run this code. You should notice a small red pixel on the center of the window. That's it, here is our first pixel!
 
-![](https://i.imgur.com/hk0fNQ1.png)
+![](pixel-put.png)
 
 ### A small check to be safe
 
@@ -251,7 +250,7 @@ by value here.
 These `render_rect` function calls will display two rectangles: one in the upper left corner of the window (red), and the other
 in the bottom right corner (green).
 
-![](https://i.imgur.com/vobnHIw.png)
+![](rectangles.png)
 
 ## Drawbacks of our approach
 
@@ -307,10 +306,9 @@ Be careful to render the background before the rectangles so that they're not ov
 
 Anyway, let's see what we're getting:
 
-![](https://i.imgur.com/eoYHnkj.png)
+![](flickering-rectangles.gif)
 
-Uh. What an ugly flickering we have now. Hopefully you can see something is wrong on the screen, but PLEASE
-run this code on your machine. It is essential to understand what is going on here.
+Uh. What an ugly flickering we have now. 
 
 Okay. Well, the issue we have here is pretty simple.
 
@@ -347,6 +345,7 @@ The first step is obviously to tell the minilibx we want to create a new image. 
 ```c
 void	*mlx_new_image(void *mlx_ptr,int width,int height);
 ```
+
 Well, I think there's nothing really complicated with that prototype. We're going to use the dimensions of the window for
 our image, because the image is supposed to hold the window's pixels.
 
@@ -566,7 +565,7 @@ We then need to push the updated image on the window, which is done using `mlx_p
 of the image are (0, 0) because it is covering the whole window. The `mlx_put_image_to_window` will push the image
 as well as the changes done to it (if any) at each frame.
 
-![](https://i.imgur.com/7NvSVqB.png)
+![](final-rectangles.png)
 
 See what we have now ? Awesome!
 

@@ -46,6 +46,7 @@ function Home(props) {
 
 	const renderPostCard = (post, imageLocation) => (
 		<Link
+			key={post.id}
 			href={`/posts/${post.id}`}
 		>
 			<div 

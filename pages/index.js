@@ -97,7 +97,7 @@ function Home(props) {
 	return (
 		<Fragment>
 			<Head>
-				<title>Aurelien Brabant</title>
+				<title>Aurélien Brabant - Web developer</title>
 			</Head>
 			<Layout>
 				<Container

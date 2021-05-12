@@ -1,3 +1,5 @@
+import Head from "next/head"
+
 import Layout from "../components/Layout";
 import Container from "../components/Container";
 
@@ -6,6 +8,11 @@ import styles from "../styles/about.module.css";
 export default function About() {
 	return (
 		<Layout>
+			<Head>
+				<title>
+					About | Aurélien Brabant
+				</title>
+			</Head>
 			<Container
 				pageHeight
 				size="lg"

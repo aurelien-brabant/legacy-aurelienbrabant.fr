@@ -1,8 +1,7 @@
 .inlineCode {
-	color: #F10C1A;
-	font-size: 1.2em;
+	font-size: 0.9em;
 	padding: 2px 5px;
 	margin: 0 2px;
-	font-family: Terminus;
+	font-family: JetBrains;
 	border-radius: 5px;
 }

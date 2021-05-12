@@ -24,7 +24,7 @@ export default function Header() {
 	/* Event listener setup */
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);	
-		
+
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, [ prevScrollPos, visible, handleScroll ]);
 
@@ -38,24 +38,18 @@ export default function Header() {
 
 				{ /* logo */ }
 				<div className={styles.logoWrapper}>
-					{/*
-					<i 
-						className={`material-icons ${styles.logoIcon}`}>
-						format_quote
-					</i>
-					*/}
-					<img src="/imgs/logo.jpg" className={styles.logoIcon} />
+					<i className={`fas fa-terminal ${styles.logoIcon}`} />
 					<div>
-					<Link href="/">
-						<a>
-							<h1 className={styles.title}>
-								Aurelien Brabant
-							</h1>
-							<h3 className={styles.subtitle}>
-								Becoming a software engineer
-							</h3>
-						</a>
-					</Link>
+						<Link href="/">
+							<a>
+								<h1 className={styles.title}>
+									Aurelien Brabant
+								</h1>
+								<h3 className={styles.subtitle}>
+									Becoming a software engineer
+								</h3>
+							</a>
+						</Link>
 					</div>
 				</div>
 

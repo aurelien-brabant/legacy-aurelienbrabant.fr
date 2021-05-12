@@ -5,19 +5,19 @@ import styles from "../styles/socials.module.css";
 const socialMedias = [
 	{
 		href: "https://github.com/aurelien-brabant",
-		ficon: "fa fa-github-alt",
+		ficon: "fab fa-github-alt",
 		color: "#000000",
 		id: 0,
 	},
 	{
 		href: "https://www.linkedin.com/in/aurelien-brabant",
-		ficon: "fa fa-linkedin",
+		ficon: "fab fa-linkedin",
 		color: "#0a66C2",
 		id: 1,
 	},
 	{
 		href: "https://twitter.com/aurelienb42",
-		ficon: "fa fa-twitter",
+		ficon: "fab fa-twitter",
 		color: "#00A2F5",
 		id: 2,
 	}

@@ -75,7 +75,6 @@
 }
 
 .title, .subtitle {
-	display: none;
 	padding: 0;
 	margin:  0;
 }
@@ -91,32 +90,35 @@
 }
 
 .logoIcon {
-	max-width: 50px;
+	display: none;
+	font-size: 1.5rem;
+	margin-right: 1em;
 }
 
 @media screen and (min-width: 600px) {
 	.header {
 		height: 80px;	
 	}
+
 	.headerBlock {
 		flex-direction: row;
 		justify-content: space-around;
 	}
-	.title, .subtitle {
-		display: block;
-	}
-	
+
 	.navbar {
 		margin: 0 10px 0 0;
 	}
 
 	.logoIcon {
-		max-width: 80px;
+		display: inline-block;
+		font-size: 1.7rem;
+	}
+
+	.subtitle {
+		display: block;
 	}
 
 	.headerRight {
 		flex-direction: row;
 	}
 }
-
-

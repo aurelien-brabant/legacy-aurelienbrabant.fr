@@ -38,10 +38,13 @@ export default function Header() {
 
 				{ /* logo */ }
 				<div className={styles.logoWrapper}>
+					{/*
 					<i 
 						className={`material-icons ${styles.logoIcon}`}>
-						code
+						format_quote
 					</i>
+					*/}
+					<img src="/imgs/logo.jpg" className={styles.logoIcon} />
 					<div>
 					<Link href="/">
 						<a>

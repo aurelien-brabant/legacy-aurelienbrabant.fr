@@ -101,6 +101,7 @@ function Home(props) {
 				<meta key="description" content="Web developer and student at 42 Paris, sharing code and thoughts. 
 					Available to work on every project involving code, just send me a message!" />
 				<meta key="og:url" property="og:url" content="aurelienbrabant.fr" />
+				<link key="canonical" rel="canonical" href="https://aurelienbrabant.fr" />
 			</Head>
 			<Layout>
 				<Container

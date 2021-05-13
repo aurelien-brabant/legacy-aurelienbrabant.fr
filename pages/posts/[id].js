@@ -25,7 +25,10 @@ export default function Post({ postData }) {
 				<title key="title">{postData.title}</title>
 				<meta key="description" name="description" content={postData.preview} />
 				{postId &&
+				<Fragment>
 					<meta key="og:url" property="og:url" content={`aurelienbrabant.fr/posts/${postId}`} />
+					<link key="canonical" rel="canonical" href={`https://aurelienbrabant.fr/posts/${postId}`} />
+				</Fragment>
 				}
 			</Head>
 			<Layout>

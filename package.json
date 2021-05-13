@@ -7,9 +7,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+	"postbuild": "node scripts/sitemap.js" 
   },
   "dependencies": {
+    "fs-extra": "^10.0.0",
     "gray-matter": "^4.0.2",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",

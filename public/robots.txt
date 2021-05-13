@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: https://aurelienbrabant.fr/sitemap_local.xml
+Disallow:

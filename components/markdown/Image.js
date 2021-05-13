@@ -13,11 +13,7 @@ export default function Image({ src, alt }) {
 		}
 	}, [])
 
-	if (!postId) {
-		src = "/imgs/no-image.png";
-	} else {
-		src = isLocal ? `/imgs/${postId}/${src}` : src;
-	}
+	src = isLocal ? `/imgs/${postId}/${src}` : src;
 
 	return (
 		<a

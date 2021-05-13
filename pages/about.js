@@ -12,6 +12,8 @@ export default function About() {
 				<title>
 					About | Aurélien Brabant
 				</title>
+				<meta key="description" content="Web developer and student at 42 Paris, sharing code and thoughts. 
+					Available to work on every project involving code, just send me a message!">
 			</Head>
 			<Container
 				pageHeight

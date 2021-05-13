@@ -97,7 +97,9 @@ function Home(props) {
 	return (
 		<Fragment>
 			<Head>
-				<title>Aurélien Brabant - Web developer</title>
+				<title>Aurélien Brabant</title>
+				<meta key="description" content="Web developer and student at 42 Paris, sharing code and thoughts. 
+					Available to work on every project involving code, just send me a message!">
 			</Head>
 			<Layout>
 				<Container

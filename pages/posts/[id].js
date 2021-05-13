@@ -17,6 +17,7 @@ export default function Post({ postData }) {
         <Fragment>
             <Head>
                 <title>{postData.title}</title>
+				<meta name="description" content={postData.preview} />
             </Head>
             <Layout>
                 <Container

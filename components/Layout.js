@@ -19,9 +19,7 @@ export default function Layout(props) {
 				{ /* opengraph tags */ }
 				<meta key="og:type" property="og:type" content="website" />
 				<meta key="og:image:type" property="og:image:type" content="image/png" />
-				{/*<meta key="og:image:width" property="og:image:width" content="1200" />
-				<meta key="og:image:height" property="og:image:height" content="630" />*/
-				}
+				<meta key="og:image" property="og:image" content="https://aurelienbrabant.fr/imgs/og-image.png" />
 
 				{ /* load remote assets */ }
 				<link

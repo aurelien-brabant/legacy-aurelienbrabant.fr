@@ -97,9 +97,12 @@ function Home(props) {
 	return (
 		<Fragment>
 			<Head>
-				<title>Aurélien Brabant</title>
+				<title>Web developer and 42 Student | Aurélien Brabant</title>
 				<meta key="description" content="Web developer and student at 42 Paris, sharing code and thoughts. 
-					Available to work on every project involving code, just send me a message!">
+					Available to work on every project involving code, just send me a message!" />
+				<meta key="og:image" property="og:image" content="https://aurelienbrabant.fr/imgs/me.png" />
+				<meta key="og:image:alt" property="og:image:alt" content="photo of Aurélien" />
+				<meta key="og:url" property="og:url" content="aurelienbrabant.fr" />
 			</Head>
 			<Layout>
 				<Container

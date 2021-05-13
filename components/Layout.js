@@ -17,11 +17,11 @@ export default function Layout(props) {
 				<meta name="theme-color" content="#ffffff" />
 				
 				{ /* opengraph tags */ }
-				<meta key="og:title" property="og:title" content="Web developer and student at 42 Paris, sharing code and thoughts." />
 				<meta key="og:type" property="og:type" content="website" />
 				<meta key="og:image:type" property="og:image:type" content="image/png" />
-				<meta key="og:image:width" property="og:image:width" content="1200" />
-				<meta key="og:image:height" property="og:image:height" content="630" />
+				{/*<meta key="og:image:width" property="og:image:width" content="1200" />
+				<meta key="og:image:height" property="og:image:height" content="630" />*/
+				}
 
 				{ /* load remote assets */ }
 				<link

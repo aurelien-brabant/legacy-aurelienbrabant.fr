@@ -26,6 +26,7 @@ export default function Post({ postData }) {
 				<meta key="description" name="description" content={postData.preview} />
 				{postId &&
 				<Fragment>
+					{console.log(`https://aurelienbrabant.fr/covers/${postId}.png`)}
 					<meta key="og:image" property="og:image" content={`https://aurelienbrabant.fr/covers/${postId}.png`} />
 					<meta key="og:image:alt" property="og:image:alt" content="post cover image" />
 					<meta key="og:url" property="og:url" content={`aurelienbrabant.fr/posts/${postId}`} />

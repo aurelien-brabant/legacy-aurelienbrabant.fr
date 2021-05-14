@@ -4,6 +4,12 @@ import styles from "../styles/socials.module.css";
 
 const socialMedias = [
 	{
+		href: "https://www.youtube.com/channel/UC9JjIHlcttAz6QJTVjVxsdg",
+		ficon: "fab fa-youtube",
+		color: "#FD0000",
+		id: 0,
+	},
+	{
 		href: "https://github.com/aurelien-brabant",
 		ficon: "fab fa-github-alt",
 		color: "#000000",

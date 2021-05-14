@@ -9,5 +9,14 @@
   </url>,<url>
     <loc>https://aurelienbrabant.fr/posts/[id]</loc>
     <lastmod>2021-05-13</lastmod>
+  </url>,<url>
+    <loc>https://aurelienbrabant.fr/posts/events-with-the-minilibx</loc>
+    <lastmod>2021-05-12</lastmod>
+  </url>,<url>
+    <loc>https://aurelienbrabant.fr/posts/getting-started-with-the-minilibx</loc>
+    <lastmod>2021-05-12</lastmod>
+  </url>,<url>
+    <loc>https://aurelienbrabant.fr/posts/pixel-drawing-with-the-minilibx</loc>
+    <lastmod>2021-05-12</lastmod>
   </url>
 </urlset>

@@ -86,7 +86,7 @@ void	*mlx_init();
 ```
 
 That's a really simple function, but there is something interesting here. What the `mlx_init` function actually returns is a **void pointer**.
-If you're not familiar with it, a void pointer is basically an address, but the compiler doesn't know what type this address is pointing too. That's the easiest
+If you're not familiar with it, a void pointer is basically an address, but the compiler doesn't know what type this address is pointing to. That's the easiest
 way to build a kind of "generic" in C.
 
 In reality, the minilibx returns the address of a `t_xvar` element, which is the big structure containing all the useful stuff I was talking about earlier.
@@ -95,7 +95,7 @@ to. The minilibx "public" header `mlx.h` doesn't have any additional type declar
 **encapsulation** (even if this is more an oriented object programming word).
 
 Hopefully you can now understand what magic is done under the hood, because it can be really confusing to just manipulate a void pointer without knowing what it
-refers too (generally).
+refers to (generally).
 
 ### Destroying and freeing the ressources
 
@@ -104,7 +104,7 @@ Once we have finished with our program, we'll want to free all the ressources al
 leaks. That's because the display hasn't been closed. But what's the display ?
 
 One of the most important things `mlx_init` initializes is the **display**. In X Programming, the display basically refers to the connexion
-identifier used to communicate with the X Server. We'll not dive into too much details here, but just be aware that this is another big structure
+identifier used to communicate with the X Server. We won't dive to deep into details here, but just be aware that this is another big structure
 managed under the hood for you. What is important to know however, is that this display needs to be closed at some point. The minilibx now has
 a really basic function to allow you to do that without using the Xlib API. 
 

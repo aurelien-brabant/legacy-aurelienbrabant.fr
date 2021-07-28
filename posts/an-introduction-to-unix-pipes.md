@@ -219,7 +219,7 @@ After this call to `dup2`, any operation performed on the file descriptor 1 will
 be performed on the standard error.
 
 Given this demonstration, we can do exactly the same thing with our situation here.
-Before the call to `execvp` is made, we can redirect the output of echo using `dup2`.
+Before the call to `execv` is made, we can redirect the output of echo using `dup2`.
 
 ```c
 /* ... */
@@ -258,13 +258,13 @@ char *av[] = {
 	NULL,
 };
 
-if (execvp(av[0], av) == -1) {
-	perror("execvp: ");
+if (execv(av[0], av) == -1) {
+	perror("execv: ");
 }
 ```
 
 This code replaces the parent process by the `tr` program, but before calling
-`execvp` we need to wire up the read end of the pipe to the parent process
+`execv` we need to wire up the read end of the pipe to the parent process
 input, in order for `tr` to process it.
 
 To do so, we just need to perform the same call to `dup2` that we just did

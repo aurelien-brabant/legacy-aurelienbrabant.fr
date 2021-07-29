@@ -159,7 +159,7 @@ which is declared inside the `unistd.h` header.
 int pipe(int pipefd[2]);
 ```
 
-This function takes an array of 2 pipes as a single parameter. If the `pipe` function
+This function takes an array of 2 integers as a single parameter. If the `pipe` function
 succeeds, `pipefd[0]` is a file descriptor refering to the read end of the pipe while `pipefd[1]` refers
 to the write end of it.
 
